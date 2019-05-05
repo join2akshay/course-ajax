@@ -19,12 +19,12 @@
             let htmlContent = '';
       const data = JSON.parse(this.responseText);
       const firstImage = data.results[0];
-    
+
       htmlContent = `<figure>
         <img src="${firstImage.urls.regular}" alt="${searchedForText}">
         <figcaption>${searchedForText} by ${firstImage.user.name}</figcaption>
       </figure>`;
-    
+
       responseContainer.insertAdjacentHTML('afterbegin', htmlContent);
 //reterving article from NYT using XHR (AJAX)
     const articleRequest=new XMLHttpRequest();
@@ -46,13 +46,13 @@
   } else {
     htmlContent = '<div class="error-no-articles">No article available</div>';
   }
-  
+
   responseContainer.insertAdjacentHTML('beforeend', htmlContent);
     }
         }
 
     });
 
-    
-  
+
+
 })();
