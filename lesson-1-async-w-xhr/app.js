@@ -26,6 +26,7 @@
       </figure>`;
 
       responseContainer.insertAdjacentHTML('afterbegin', htmlContent);
+    }
 //reterving article from NYT using XHR (AJAX)
     const articleRequest=new XMLHttpRequest();
     articleRequest.open('GET',`http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=gxLwGsDQuYgBwulhQiwi6J7K5H62hfBY`);
@@ -49,7 +50,7 @@
 
   responseContainer.insertAdjacentHTML('beforeend', htmlContent);
     }
-        }
+       
 
     });
 
