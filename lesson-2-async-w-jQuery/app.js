@@ -17,7 +17,7 @@
             }
         }).done(addImage);
         function addImage(images) {
-            console.log(images);
+           
             const firstImage = images.results[0];
         
             responseContainer.insertAdjacentHTML('afterbegin', `<figure>
